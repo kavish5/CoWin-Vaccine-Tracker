@@ -17,7 +17,6 @@ for input_date in date_str:
     response = requests.get(url)
     if response.ok:
         result = response.json()
-        flag = False
         if result["centers"]:
             print("Available on: {}".format(input_date))
             for center in result["centers"]:
